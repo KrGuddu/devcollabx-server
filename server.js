@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 // ─── Keep-Alive Ping (prevents Render free-tier from sleeping) ──────────────
 // Fires every 14 minutes — generous enough to prevent spin-down without hammering
-const RENDER_URL = "https://realtime-code-editor-run.onrender.com";
+const RENDER_URL = "https://devcollabx-server.onrender.com";
 const keepAlive = setInterval(() => {
   axios.get(RENDER_URL).catch(() => { });
 }, 14 * 60 * 1000); // 14 minutes
